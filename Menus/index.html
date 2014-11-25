@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title></title>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
 	</head>
 
 	<body>
-		<!-- content -->
-	</body>
+		<div id="div-title"> 
+			<p>This example currently only works in Firefox!
+		</div>
 
+		<figure>
+			<img id="image" src="city.jpg" height="667" width="1000" alt="">
+		</figure>
+
+		<div style="background:yellow;border:1px solid #cccccc;padding: 10px;" contextmenu="submenu">
+			<p>Demonstrate menu :D
+
+			<menu type="context" id="submenu">
+				<menu label="Image Rotation">
+					<menuitem onclick="imageRotation('rotate-90')" icon="../../images/icons/arrow-return-090.png">Rotate 90</menuitem>
+					<menuitem icon="../../images/icons/arrow-return-180.png">Rotate 180</menuitem>
+					<menuitem icon="../../images/icons/arrow-stop-180.png">Flip Horizontally</menuitem>
+					<menuitem icon="../../images/icons/arrow-stop-270.png">Flip Vertically</menuitem>
+				</menu>
+			</menu>
+		</div>
+
+		<script>
+			function imageRotation(name){
+				document.getElementById('image').className = name;
+			}
+		</script>
+	</body>
 </html>
